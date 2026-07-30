@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenThumbGurus | Service Categories</title>
+    <style>
+        :root {
+            --primary-color: #2c5e3b;
+            --secondary-color: #f4ebd9;
+            --accent-color: #d4a373;
+            --text-dark: #333333;
+            --text-light: #fefae0;
+            --bg-color: #fdfaf6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        header {
+            background: linear-gradient(-45deg, #2c5e3b, #4a7c59, #8bb174, #d4a373);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: var(--text-light);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.5s backwards;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content-section {
+            background: white;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            animation: fadeInUp 1.2s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+        .delay-7 { animation-delay: 0.7s; }
+
+        .content-section h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .content-section h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin: 1.8rem 0 0.8rem 0;
+            font-weight: 600;
+        }
+
+        .content-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1.5rem 0 1.5rem 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .content-section ul li, .content-section ol li {
+            margin-bottom: 0.8rem;
+        }
+
+        blockquote {
+            background-color: var(--secondary-color);
+            border-left: 8px solid var(--accent-color);
+            padding: 2rem;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .category-card {
+            background: var(--bg-color);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 6px solid var(--accent-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .category-card h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .category-card p {
+            font-size: 1rem;
+            text-align: justify;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .image-card {
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: block;
+        }
+
+        .image-card:hover img {
+            transform: scale(1.08) rotate(1deg);
+        }
+
+        .image-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(44, 94, 59, 0.5) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .image-card:hover::after {
+            opacity: 1;
+        }
+
+        .highlight-box {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--accent-color);
+            margin: 2rem 0;
+        }
+
+        footer {
+            background-color: #1a3a24;
+            color: var(--text-light);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer h4 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            margin-top: 2rem;
+            animation: pulse 2s infinite;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #f4ebd9;
+            color: var(--primary-color);
+            animation: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1.2rem; }
+            .content-section { padding: 2rem; }
+            nav ul { flex-direction: column; align-items: center; }
+            nav ul li { margin-bottom: 10px; }
+            .content-section ul, .content-section ol { margin-left: 1.5rem; }
+            .category-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Our Service Categories</h1>
+        <p>Comprehensive, eco-conscious garden revival solutions tailored to every landscape.</p>
+    </header>
+
+    <main>
+        <!-- Section 1: Introduction -->
+        <section class="content-section delay-1">
+            <h2>Transforming Landscapes, One Category at a Time</h2>
+            <p>At GreenThumbGurus, we understand that every garden is a unique living tapestry, woven with its own history, challenges, and aspirations. No two properties are exactly alike—soil compositions vary, microclimates shift, and the vision of each homeowner is distinct. That is why we have developed a comprehensive, multi-category service model that addresses every facet of garden revival and ecological restoration. Whether you are a homeowner seeking to reclaim an overgrown backyard, a property manager aiming to enhance curb appeal, or a community organization looking to establish a public food forest, our expertise spans the full spectrum of horticultural and ecological services.</p>
+            <p>Our categories are not merely a list of services; they represent a holistic philosophy. We view each project as an opportunity to heal the land, to create beauty that sustains, and to build resilience against environmental stressors. From the microscopic world of soil biology to the sweeping aesthetics of landscape design, our approach is integrated, science-based, and deeply respectful of natural processes. We believe that a truly revived garden is one that functions as a self-regulating ecosystem—supporting pollinators, sequestering carbon, managing water wisely, and providing joy and sustenance for generations to come.</p>
+            <p>In the sections that follow, we delve into each of our core service categories, providing detailed insights into the methodologies, benefits, and expected outcomes. We invite you to explore these offerings and consider how they can be combined to create a customized revival plan for your unique space. Remember, a thriving garden is not a luxury; it is a necessity for our collective well-being, and GreenThumbGurus is here to guide you every step of the way.</p>
+
+            <blockquote>"The garden is a mirror of the soul. When we heal the garden, we heal ourselves." — At GreenThumbGurus, our categories are designed to heal on every level.</blockquote>
+        </section>
+
+        <!-- Section 2: Category Grid -->
+        <section class="content-section delay-2">
+            <h2>Core Service Categories</h2>
+            <p>Our services are organized into seven core categories, each addressing a critical aspect of garden health and ecological function. Click on any category to learn more about its specific offerings, techniques, and benefits.</p>
+
+            <div class="category-grid">
+                <div class="category-card">
+                    <h4>🌱 Soil Health & Remediation</h4>
+                    <p>Comprehensive soil testing, aeration, organic amendment, biochar application, and compost tea inoculation to rebuild the living foundation of your garden.</p>
+                </div>
+                <div class="category-card">
+                    <h4>🌿 Native Planting & Ecological Design</h4>
+                    <p>Custom-designed plant palettes featuring native species, pollinator gardens, meadow restoration, and layered woodland ecosystems that support local biodiversity.</p>
+                </div>
+                <div class="category-card">
+                    <h4>🍎 Edible Landscapes & Food Forests</h4>
+                    <p>Design and installation of productive food forests, including fruit trees, berry bushes, perennial vegetables, and culinary herbs integrated into aesthetic landscapes.</p>
+                </div>
+                <div class="category-card">
+                    <h4>🪵 Invasive Species Management</h4>
+                    <p>Manual and targeted removal of invasive plants, along with restoration protocols to prevent re-establishment and promote native regrowth.</p>
+                </div>
+                <div class="category-card">
+                    <h4>💧 Waterwise & Stormwater Solutions</h4>
+                    <p>Rain gardens, swales, permeable hardscaping, drip irrigation, and graywater systems designed to conserve water and manage runoff naturally.</p>
+                </div>
+                <div class="category-card">
+                    <h4>🛠️ Hardscaping & Living Structures</h4>
+                    <p>Natural stone pathways, retaining walls, raised beds, pergolas, and living fences that merge function with aesthetic harmony.</p>
+                </div>
+                <div class="category-card">
+                    <h4>🌳 Arboriculture & Tree Care</h4>
+                    <p>Structural pruning, hazard assessment, root zone revitalization, and tree planting to ensure the health and longevity of your woody specimens.</p>
+                </div>
+            </div>
+
+            <p>Each of these categories can be delivered as a standalone service or integrated into a multi-phase revival plan. Our expert team works collaboratively with you to design a package that aligns with your budget, timeline, and ecological goals. We pride ourselves on our flexibility and our commitment to continuous communication throughout every project.</p>
+        </section>
+
+        <!-- Section 3: Deep Dive - Soil Health -->
+        <section class="content-section delay-3">
+            <h2>In-Depth Category Analysis</h2>
+
+            <h3>1. Soil Health & Remediation</h3>
+            <p>Soil is the living matrix that sustains all terrestrial life. Unfortunately, most suburban and urban soils have been severely degraded by construction activities, compaction, chemical fertilizers, and erosion. Our soil health category is the cornerstone of every revival project. We begin with a comprehensive soil analysis that measures pH, nutrient levels, organic matter content, and microbial activity. This data informs a tailored remediation plan that may include:</p>
+            <ul>
+                <li><strong>Mechanical Aeration:</strong> Using core aerators to relieve compaction and allow oxygen, water, and nutrients to penetrate the root zone.</li>
+                <li><strong>Organic Amendments:</strong> Application of mature compost, worm castings, and aged manures to build soil structure and fertility.</li>
+                <li><strong>Biochar Incorporation:</strong> Adding this stable form of charcoal to enhance water and nutrient retention while providing habitat for beneficial fungi.</li>
+                <li><strong>Compost Tea Inoculation:</strong> Spraying a liquid concentrate of beneficial microbes to jumpstart the soil food web.</li>
+                <li><strong>Mycorrhizal Inoculants:</strong> Introducing symbiotic fungi that form networks with plant roots, dramatically improving nutrient and water uptake.</li>
+            </ul>
+            <p>The results of our soil remediation are transformative: plants become more vigorous, disease resistance increases, and water requirements decrease significantly. Healthy soil also acts as a carbon sink, helping to mitigate climate change. This category is essential for any garden that has been neglected or subjected to conventional landscaping practices.</p>
+
+            <div class="image-gallery">
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1535197800260-5d15e5a2d953?q=80&w=800" alt="Rich dark soil with earthworms">
+                </div>
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800" alt="Soil testing equipment and samples">
+                </div>
+            </div>
+
+            <h3>2. Native Planting & Ecological Design</h3>
+            <p>Once the soil is prepared, we turn our attention to the living palette. Our native planting category is rooted in the belief that gardens should reflect and support the unique ecology of their region. We design plant communities that mimic natural ecosystems, creating layered habitats that provide food, shelter, and breeding grounds for local wildlife. Key elements include:</p>
+            <ul>
+                <li><strong>Plant Selection:</strong> We curate a list of native trees, shrubs, perennials, and grasses that are adapted to your specific climate, soil type, and sun exposure.</li>
+                <li><strong>Successional Planting:</strong> We design for year-round interest, ensuring that something is always blooming or providing structure throughout the seasons.</li>
+                <li><strong>Pollinator Corridors:</strong> We prioritize plants that support bees, butterflies, hummingbirds, and other essential pollinators.</li>
+                <li><strong>Meadow and Prairie Restoration:</strong> For larger properties, we convert lawns into diverse meadows that require less mowing and provide critical habitat.</li>
+            </ul>
+            <p>Native plants are inherently resilient, requiring less water, fewer inputs, and no synthetic fertilizers once established. They form the backbone of a sustainable garden that thrives in harmony with its surroundings. Our designs are both beautiful and functional, creating spaces that invite you to connect with the natural world.</p>
+
+            <h3>3. Edible Landscapes & Food Forests</h3>
+            <p>Why choose between an ornamental garden and a vegetable patch? Our edible landscaping category merges the two, creating productive landscapes that are as beautiful as they are bountiful. We design multi-layered food forests that mimic the structure of a natural woodland, maximizing productivity in a small footprint. This approach includes:</p>
+            <ul>
+                <li><strong>Canopy Layer:</strong> Fruit and nut trees (apples, pears, walnuts, pecans) that provide shade and high yields.</li>
+                <li><strong>Understory Layer:</strong> Smaller fruit trees (dwarf cherries, pawpaws, persimmons) and berry shrubs (blueberries, currants, gooseberries).</li>
+                <li><strong>Herbaceous Layer:</strong> Perennial vegetables (asparagus, rhubarb, artichokes) and culinary herbs (rosemary, thyme, sage) that add flavor and texture.</li>
+                <li><strong>Groundcover Layer:</strong> Creeping plants (strawberries, creeping thyme) that suppress weeds and retain moisture.</li>
+                <li><strong>Root Layer:</strong> Edible roots (sunchokes, garlic, potatoes) that harvest beneath the surface.</li>
+            </ul>
+            <p>These systems are designed to be low-maintenance once established, with the plants supporting each other through nutrient cycling and natural pest suppression. They provide a continuous supply of fresh, organic produce for your table, connecting you to the rhythms of the seasons and the land.</p>
+        </section>
+
+        <!-- Section 4: More Categories -->
+        <section class="content-section delay-4">
+            <h2>Specialized Services for Complex Challenges</h2>
+
+            <h3>4. Invasive Species Management</h3>
+            <p>Invasive species are one of the greatest threats to biodiversity and garden health. They outcompete native plants, alter soil chemistry, and degrade wildlife habitat. Our invasive species management category is a specialized service designed to safely and effectively remove aggressive invaders from your property. We employ a variety of techniques, including:</p>
+            <ul>
+                <li><strong>Manual Removal:</strong> Hand-pulling, digging, and cutting for small infestations or in sensitive areas where herbicides are not appropriate.</li>
+                <li><strong>Sheet Mulching:</strong> Smothering invasive plants with layers of cardboard and wood chips to block light and deplete root reserves.</li>
+                <li><strong>Targeted Herbicide Application:</strong> When manual methods are insufficient, we use low-impact herbicides applied by trained professionals to minimize collateral damage.</li>
+                <li><strong>Follow-Up Monitoring:</strong> Invasive species often require multiple years of management to fully eradicate. We provide ongoing monitoring and maintenance to ensure they do not return.</li>
+            </ul>
+            <p>Our goal is not just to remove invasive species but to restore the ecological balance of your garden, creating space for native plants to re-establish and thrive. We take a long-term view, recognizing that recovery is a process that requires patience and persistence.</p>
+
+            <h3>5. Waterwise & Stormwater Solutions</h3>
+            <p>Water is the lifeblood of any garden, but it is also a finite and increasingly precious resource. Our waterwise category focuses on designing and installing systems that minimize water use while maximizing infiltration and reducing runoff. Key offerings include:</p>
+            <ul>
+                <li><strong>Rain Gardens:</strong> Shallow depressions planted with water-tolerant natives that capture and filter runoff from roofs and driveways.</li>
+                <li><strong>Swales and Berms:</strong> Contoured earthworks that slow and spread water across the landscape, allowing it to soak into the soil.</li>
+                <li><strong>Permeable Hardscaping:</strong> Driveways, patios, and pathways constructed from porous materials that allow water to infiltrate rather than run off.</li>
+                <li><strong>Drip Irrigation:</strong> Highly efficient irrigation systems that deliver water directly to plant roots, minimizing evaporation and waste.</li>
+                <li><strong>Graywater Systems:</strong> Reusing water from sinks, showers, and washing machines to irrigate ornamental plants and fruit trees.</li>
+            </ul>
+            <p>These solutions not only conserve water but also reduce the burden on municipal stormwater systems, preventing pollution of local waterways. They transform your garden into a sponge that absorbs and filters rainfall, contributing to a healthier local ecosystem.</p>
+
+            <div class="image-gallery">
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1598902108854-6e76124eb0a0?q=80&w=800" alt="Rain garden with flowering plants">
+                </div>
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800" alt="Permeable stone pathway">
+                </div>
+            </div>
+
+            <h3>6. Hardscaping & Living Structures</h3>
+            <p>Hardscaping provides the bones of your garden—the structures that define spaces, create flow, and offer functional surfaces for seating, dining, and circulation. Our hardscaping category emphasizes the use of natural, sustainable materials that blend seamlessly with the surrounding landscape. We offer:</p>
+            <ul>
+                <li><strong>Natural Stone Pathways:</strong> Flagstone, slate, or cobblestone paths that meander through the garden, inviting exploration.</li>
+                <li><strong>Retaining Walls:</strong> Dry-stack or mortared stone walls that manage slopes, create terraced planting areas, and add visual interest.</li>
+                <li><strong>Raised Beds:</strong> Constructed from rot-resistant wood or stone, raised beds improve drainage, extend the growing season, and make gardening more accessible.</li>
+                <li><strong>Pergolas and Arbors:</strong> Timber structures that provide shade, support climbing vines, and define outdoor rooms.</li>
+                <li><strong>Living Fences and Screens:</strong> Dense hedges of native shrubs or espaliered fruit trees that provide privacy, wind protection, and wildlife habitat.</li>
+            </ul>
+            <p>Our designs balance aesthetic appeal with ecological function, ensuring that every hardscaping element contributes to the overall health and beauty of your garden.</p>
+
+            <h3>7. Arboriculture & Tree Care</h3>
+            <p>Mature trees are among the most valuable assets in any landscape. They provide shade, filter air, support wildlife, and increase property value. Our arboriculture category is dedicated to the health and safety of your trees. Services include:</p>
+            <ul>
+                <li><strong>Structural Pruning:</strong> Selective removal of branches to improve form, eliminate hazards, and promote healthy growth.</li>
+                <li><strong>Crown Reduction and Thinning:</strong> Reducing the weight and density of a tree's canopy to prevent storm damage and improve light penetration.</li>
+                <li><strong>Root Zone Management:</strong> Aeration, mulching, and mycorrhizal inoculation to support root health and vitality.</li>
+                <li><strong>Hazard Assessment:</strong> Detailed inspections to identify structural weaknesses, disease, or pest infestations that could pose a risk.</li>
+                <li><strong>Tree Planting and Establishment:</strong> Expert planting of new trees with proper staking, watering, and aftercare to ensure successful establishment.</li>
+            </ul>
+            <p>We treat each tree as an individual, developing a care plan that addresses its specific needs and conditions. Proper tree care not only enhances the beauty of your garden but also ensures the safety and longevity of these magnificent living structures.</p>
+        </section>
+
+        <!-- Section 5: Integrated Solutions -->
+        <section class="content-section delay-5">
+            <h2>Integrated Solutions: The Power of a Holistic Approach</h2>
+            <p>While each of our service categories is powerful on its own, the true magic of GreenThumbGurus lies in our ability to integrate them into a cohesive, unified plan. A garden is a complex system of interacting elements—soil, water, plants, animals, and structures—all of which influence each other. By addressing these elements in a coordinated manner, we achieve outcomes that are greater than the sum of their parts.</p>
+            <p>For example, a project that combines soil remediation, native planting, and waterwise design creates a garden that is not only beautiful and productive but also self-sustaining and resilient. The healthy soil supports vigorous plant growth, while the native plants provide food and habitat for beneficial insects that control pests naturally. The waterwise features ensure that the garden can thrive even during droughts, reducing your reliance on irrigation.</p>
+            <p>We encourage you to think of our categories as building blocks that can be mixed and matched to create a custom solution that fits your unique context. Our design team excels at finding synergies between categories, maximizing the ecological and aesthetic return on your investment. Whether you are starting from scratch or seeking to restore a historic garden, we have the expertise to guide you through every stage of the process.</p>
+
+            <div class="highlight-box">
+                <h4>Customized Project Planning</h4>
+                <p>We offer free initial consultations where we listen to your vision, assess your property, and provide a preliminary analysis of which categories would be most beneficial for your garden. We work with you to create a phased plan that aligns with your budget and timeline, ensuring that you can achieve your dream garden without overwhelming your resources.</p>
+            </div>
+
+            <blockquote>"A garden is never so good as when it looks as if no one has ever touched it, yet every detail is carefully considered." — Our integrated approach creates gardens that feel effortless, yet are meticulously designed.</blockquote>
+        </section>
+
+        <!-- Section 6: Why Choose GreenThumbGurus -->
+        <section class="content-section delay-6">
+            <h2>Why Choose GreenThumbGurus for Your Garden Revival?</h2>
+            <p>With so many landscaping companies available, what sets GreenThumbGurus apart? The answer lies in our unwavering commitment to ecological integrity, our depth of expertise, and our genuine passion for the natural world. When you choose us, you are choosing a partner who cares as deeply about the health of your garden as you do. Here are just a few reasons why our clients trust us with their most precious outdoor spaces:</p>
+            <ul>
+                <li><strong>Scientific Rigor:</strong> Our practices are grounded in the latest research in ecology, soil science, and horticulture. We do not rely on outdated methods or chemical shortcuts.</li>
+                <li><strong>Customized Solutions:</strong> We reject one-size-fits-all approaches. Every plan we create is tailored to the specific conditions and aspirations of each client.</li>
+                <li><strong>Holistic Thinking:</strong> We see the big picture—the connections between soil, water, plants, and wildlife—and design accordingly.</li>
+                <li><strong>Long-Term Stewardship:</strong> Our relationship with you does not end when the installation is complete. We offer ongoing maintenance and stewardship programs to ensure your garden continues to flourish.</li>
+                <li><strong>Environmental Responsibility:</strong> We use organic, sustainable materials and practices that protect the health of your family, your pets, and the broader environment.</li>
+                <li><strong>Passionate Team:</strong> Our team members are not just employees; they are dedicated environmental stewards who bring enthusiasm and care to every project.</li>
+            </ul>
+            <p>We take immense pride in the transformations we facilitate—from barren, lifeless yards to thriving, vibrant ecosystems. We invite you to join our growing community of satisfied clients and to experience the joy of a garden that truly lives.</p>
+        </section>
+
+        <!-- Section 7: Getting Started -->
+        <section class="content-section delay-7">
+            <h2>Ready to Begin Your Revival Journey?</h2>
+            <p>We understand that embarking on a garden revival project can feel daunting. There are so many decisions to make—what to plant, how to prepare the soil, where to start. That is why we have simplified the process. Your journey with GreenThumbGurus begins with a simple conversation. Contact us today to schedule a free, no-obligation consultation. We will visit your property, listen to your goals, and provide a clear, transparent overview of the categories and services that would best serve your garden.</p>
+            <p>Whether you are interested in a single category, such as soil remediation, or you are ready for a complete, multi-phase revival, we are here to guide you with expertise, patience, and enthusiasm. The earth is resilient, and with the right care, your garden can become a source of profound beauty, sustenance, and peace. Do not wait—the first step toward a revived garden is just a phone call or email away.</p>
+            <p><strong>GreenThumbGurus</strong> — Where the art of gardening meets the science of ecology. We look forward to working with you to create a landscape that enriches your life and heals the planet.</p>
+        </section>
+    </main>
+
+    <!-- Footer with Address and Phone Number -->
+    <footer>
+        <h4>GreenThumbGurus - Garden Revival Service</h4>
+        <p>Bringing life, beauty, and ecological balance back to your outdoor spaces.</p>
+        <p><strong>Address:</strong> 142 Nature's Path, Botanical District, Eden Valley, EV 90210</p>
+        <p><strong>Phone:</strong> +1 (555) 867-5309</p>
+        <a href="contact.html" class="cta-button">Start Your Revival Journey Today</a>
+    </footer>
+
+</body>
+</html>

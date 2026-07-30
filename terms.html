@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenThumbGurus | Terms of Service</title>
+    <style>
+        :root {
+            --primary-color: #2c5e3b;
+            --secondary-color: #f4ebd9;
+            --accent-color: #d4a373;
+            --text-dark: #333333;
+            --text-light: #fefae0;
+            --bg-color: #fdfaf6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        header {
+            background: linear-gradient(-45deg, #2c5e3b, #4a7c59, #8bb174, #d4a373);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: var(--text-light);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.5s backwards;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content-section {
+            background: white;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            animation: fadeInUp 1.2s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+        .delay-7 { animation-delay: 0.7s; }
+        .delay-8 { animation-delay: 0.8s; }
+
+        .content-section h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .content-section h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin: 1.8rem 0 0.8rem 0;
+            font-weight: 600;
+        }
+
+        .content-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1.5rem 0 1.5rem 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .content-section ul li, .content-section ol li {
+            margin-bottom: 0.8rem;
+        }
+
+        blockquote {
+            background-color: var(--secondary-color);
+            border-left: 8px solid var(--accent-color);
+            padding: 2rem;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--accent-color);
+            margin: 2rem 0;
+        }
+
+        .warning-box {
+            background-color: #fdf0e6;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 8px solid #d4a373;
+            margin: 2rem 0;
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .terms-card {
+            background: var(--bg-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 6px solid var(--accent-color);
+        }
+
+        .terms-card h4 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .terms-card p {
+            font-size: 1rem;
+            text-align: justify;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #1a3a24;
+            color: var(--text-light);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer h4 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            margin-top: 2rem;
+            animation: pulse 2s infinite;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #f4ebd9;
+            color: var(--primary-color);
+            animation: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1.2rem; }
+            .content-section { padding: 2rem; }
+            nav ul { flex-direction: column; align-items: center; }
+            nav ul li { margin-bottom: 10px; }
+            .content-section ul, .content-section ol { margin-left: 1.5rem; }
+            .terms-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Terms of Service</h1>
+        <p>Our commitment to transparency, fairness, and excellence in every interaction.</p>
+    </header>
+
+    <main>
+        <!-- Section 1: Introduction -->
+        <section class="content-section delay-1">
+            <h2>Welcome to GreenThumbGurus</h2>
+            <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("Client," "User," "You") and GreenThumbGurus ("Company," "We," "Us," "Our") governing your access to and use of our website, services, content, and all related offerings. By visiting our website, engaging our professional garden revival services, subscribing to our newsletters, or otherwise interacting with us, you agree to be bound by these Terms. If you do not agree with any provision of these Terms, you must immediately cease using our website and services.</p>
+            <p>We reserve the right to update, modify, or replace these Terms at any time without prior notice. Changes will be effective immediately upon posting on this page. Your continued use of our website and services following any changes constitutes your acceptance of the revised Terms. We encourage you to review this page periodically to stay informed of any updates. The most current version of these Terms will always be available at this URL.</p>
+            <p>Our mission at GreenThumbGurus is to provide exceptional garden revival and ecological restoration services that honor the natural world and enhance the lives of our clients. These Terms are designed to protect both you and us, ensuring a fair, transparent, and mutually respectful relationship. We believe that clear communication is the foundation of a successful partnership, and these Terms are an extension of that philosophy.</p>
+
+            <div class="warning-box">
+                <h4>Important Legal Notice</h4>
+                <p>These Terms of Service are a legally enforceable contract. Please read them carefully. They contain important provisions regarding your rights and obligations, limitations of liability, dispute resolution, and indemnification. If you have any questions, we encourage you to contact us before proceeding.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Definitions -->
+        <section class="content-section delay-2">
+            <h2>Definitions and Interpretation</h2>
+            <p>To ensure clarity and avoid ambiguity, the following terms used throughout these Terms have the specific meanings set forth below:</p>
+            <ul>
+                <li><strong>"Services"</strong> refers to all professional garden revival, ecological restoration, horticultural design, soil remediation, planting, hardscaping, arboriculture, and related services provided by GreenThumbGurus, whether on-site or virtually.</li>
+                <li><strong>"Website"</strong> refers to the GreenThumbGurus website, including all subdomains, pages, content, images, videos, and interactive features accessible at the URL greenthumbgurus.com (or any successor URL).</li>
+                <li><strong>"Client"</strong> or <strong>"You"</strong> refers to any individual, organization, or entity that accesses our Website, engages our Services, or otherwise interacts with GreenThumbGurus.</li>
+                <li><strong>"Content"</strong> refers to all text, graphics, images, videos, audio clips, data, software, and other materials published on our Website or provided through our Services.</li>
+                <li><strong>"Agreement"</strong> refers to these Terms of Service, together with any applicable service contracts, invoices, proposals, and other written agreements between you and GreenThumbGurus.</li>
+                <li><strong>"Third-Party Providers"</strong> refers to independent contractors, vendors, or partners that we may engage to assist in the delivery of our Services, such as material suppliers, equipment rental companies, or specialist consultants.</li>
+                <li><strong>"Intellectual Property"</strong> refers to all patents, copyrights, trademarks, trade secrets, and other proprietary rights owned by GreenThumbGurus or its licensors.</li>
+            </ul>
+            <p>These definitions are intended to provide a consistent framework for interpreting these Terms. If any term is not explicitly defined, it shall be given its ordinary meaning in the context of these Terms.</p>
+        </section>
+
+        <!-- Section 3: Acceptance of Terms -->
+        <section class="content-section delay-3">
+            <h2>Acceptance of Terms</h2>
+            <p>By using our Website, engaging our Services, or otherwise interacting with GreenThumbGurus, you acknowledge that you have read, understood, and agree to be bound by these Terms, as well as any additional terms, policies, or guidelines referenced herein. If you are accepting these Terms on behalf of a company, organization, or other legal entity, you represent and warrant that you have the authority to bind that entity to these Terms.</p>
+            <p>We reserve the right to refuse service to anyone for any reason at any time. If we suspect that a user is violating these Terms, we may suspend or terminate their access to our Website and Services without prior notice. We also reserve the right to investigate any suspected violations and to take appropriate legal action.</p>
+
+            <div class="highlight-box">
+                <h4>Age Requirement</h4>
+                <p>Our Services and Website are intended for individuals who are at least 18 years of age. By using our Services, you represent that you are at least 18 years old. If you are under 18, you may only use our Website and Services with the involvement and consent of a parent or guardian.</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Services and Proposals -->
+        <section class="content-section delay-4">
+            <h2>Services, Proposals, and Service Agreements</h2>
+            <p>Our professional garden revival services are delivered pursuant to written proposals, service agreements, or contracts that are mutually agreed upon by you and GreenThumbGurus. These Terms supplement and are incorporated into any such agreements. In the event of any conflict between these Terms and a specific service contract, the terms of the service contract shall prevail.</p>
+
+            <h3>Proposal Process</h3>
+            <p>Our engagement typically begins with a consultation, during which we assess your property, discuss your vision, and understand your budget and timeline. Following the consultation, we provide a detailed written proposal that outlines:</p>
+            <ul>
+                <li><strong>Scope of Work:</strong> A comprehensive description of the services to be performed, including specific categories of work (e.g., soil remediation, planting, hardscaping).</li>
+                <li><strong>Timeline:</strong> Estimated start and completion dates, with milestones for key phases of the project.</li>
+                <li><strong>Cost Estimate:</strong> An itemized breakdown of costs, including labor, materials, equipment rental, and any third-party fees.</li>
+                <li><strong>Payment Schedule:</strong> Clear terms for deposits, progress payments, and final payment.</li>
+                <li><strong>Warranty Information:</strong> Any warranties applicable to our workmanship or plant materials.</li>
+                <li><strong>Special Conditions:</strong> Any specific assumptions, exclusions, or conditions that may affect the project.</li>
+            </ul>
+
+            <h3>Acceptance and Modification</h3>
+            <p>Your acceptance of a proposal is indicated by signing the agreement and/or providing a deposit as specified. Once accepted, the proposal becomes a binding contract. Any changes to the scope of work after acceptance require a written change order, which may result in adjustments to the timeline and cost. We strive to accommodate reasonable modifications, but we reserve the right to decline changes that are impractical, unsafe, or beyond our expertise.</p>
+
+            <h3>Client Responsibilities</h3>
+            <p>To ensure the success of our services, you agree to:</p>
+            <ul>
+                <li>Provide us with safe, unobstructed access to your property during the agreed-upon working hours.</li>
+                <li>Disclose any known underground utilities, pipes, cables, or other hazards on your property.</li>
+                <li>Inform us of any existing property conditions, such as drainage issues, previous chemical treatments, or known pest infestations.</li>
+                <li>Secure any necessary permits or approvals from local authorities as required for the work.</li>
+                <li>Ensure that pets and children are kept safely away from work areas to prevent accidents.</li>
+                <li>Provide water access and, if needed, electrical hookups for our equipment.</li>
+            </ul>
+
+            <blockquote>"Good fences make good neighbors, and good terms make great partnerships." — At GreenThumbGurus, we believe that clear agreements are the foundation of successful collaborations.</blockquote>
+        </section>
+
+        <!-- Section 5: Payment and Billing -->
+        <section class="content-section delay-5">
+            <h2>Payment Terms and Billing</h2>
+            <p>Payment is a critical component of our service delivery. We strive to make our billing processes transparent, fair, and straightforward. The following provisions apply to all payments made to GreenThumbGurus:</p>
+
+            <h3>Payment Structure</h3>
+            <p>Our standard payment structure typically includes:</p>
+            <ul>
+                <li><strong>Deposit:</strong> A non-refundable deposit of 30% to 50% of the total project cost is required to secure your place in our schedule and to cover initial material procurement. This deposit is applied to the total project cost.</li>
+                <li><strong>Progress Payments:</strong> For larger projects, we may invoice progress payments at predetermined milestones (e.g., upon completion of soil remediation, upon planting completion).</li>
+                <li><strong>Final Payment:</strong> The remaining balance is due upon completion of the project and your final inspection and sign-off.</li>
+                <li><strong>Retainage:</strong> For very large projects, we may agree to a retainage (a percentage held back until final completion) to ensure your satisfaction.</li>
+            </ul>
+
+            <h3>Invoicing and Due Dates</h3>
+            <p>Invoices are sent via email or postal mail to the address you provide. Payment is due within 15 days of the invoice date unless otherwise agreed in writing. Late payments are subject to a late fee of 1.5% per month (or the maximum legal rate, whichever is lower) on the outstanding balance. If payment is not received within 30 days of the due date, we may suspend work until the account is brought current.</p>
+
+            <h3>Accepted Payment Methods</h3>
+            <p>We accept payments via:</p>
+            <ul>
+                <li>Credit Card (Visa, MasterCard, American Express, Discover) — processed through our secure payment gateway.</li>
+                <li>Bank Transfer (Wire Transfer or ACH) — please contact us for account details.</li>
+                <li>Check or Money Order — payable to "GreenThumbGurus" and mailed to our office address.</li>
+                <li>Zelle or other digital payment platforms — by prior arrangement.</li>
+            </ul>
+
+            <h3>Dispute Resolution for Billing</h3>
+            <p>If you believe an invoice is incorrect or inaccurate, you must notify us in writing within 15 days of receiving the invoice. We will investigate the matter promptly and, if necessary, issue a credit or adjusted invoice. Failure to dispute an invoice within this timeframe constitutes your acceptance of its accuracy.</p>
+
+            <div class="highlight-box">
+                <h4>Refund Policy</h4>
+                <p>We are committed to your satisfaction. If you are not satisfied with our services, please contact us immediately so we can address your concerns. Refunds are considered on a case-by-case basis and may be granted for incomplete or unsatisfactory work, less the cost of materials and labor already provided. No refunds are given for deposits once work has commenced, as we have already committed resources to your project.</p>
+            </div>
+        </section>
+
+        <!-- Section 6: Intellectual Property -->
+        <section class="content-section delay-6">
+            <h2>Intellectual Property Rights</h2>
+            <p>All Content on our Website, including but not limited to text, graphics, logos, icons, images, videos, audio clips, digital downloads, data compilations, and software, is the exclusive property of GreenThumbGurus or its content suppliers and is protected by international copyright, trademark, and other intellectual property laws. The compilation of all Content on our Website is our exclusive property and is similarly protected.</p>
+
+            <h3>Permitted Use</h3>
+            <p>You are granted a limited, non-exclusive, non-transferable license to access and view the Content for your personal, non-commercial use. You may download or print a single copy of portions of the Content for your own informational, non-commercial purposes, provided you do not remove any copyright or proprietary notices. This license does not give you any ownership rights in the Content.</p>
+
+            <h3>Prohibited Uses</h3>
+            <p>You may not, without our prior written consent:</p>
+            <ul>
+                <li>Republish, reproduce, duplicate, copy, sell, resell, or exploit any Content for any commercial purpose.</li>
+                <li>Modify, adapt, translate, reverse engineer, decompile, or disassemble any software or Content.</li>
+                <li>Use our trademarks, logos, or trade names without our express written permission.</li>
+                <li>Frame or utilize framing techniques to enclose any trademark, logo, or other proprietary information (including images, text, or page layout) of GreenThumbGurus.</li>
+                <li>Use any meta tags or other "hidden text" utilizing our name or trademarks.</li>
+            </ul>
+
+            <h3>Trademarks</h3>
+            <p>"GreenThumbGurus," the GreenThumbGurus logo, and all related names, logos, product and service names, designs, and slogans are trademarks of GreenThumbGurus. You may not use these marks without our prior written permission. All other names, brands, and marks are used for identification purposes only and may be the trademarks of their respective owners.</p>
+
+            <h3>User-Generated Content</h3>
+            <p>If you submit any content to us, including feedback, testimonials, photos, or ideas, you grant us a worldwide, royalty-free, perpetual, irrevocable, non-exclusive license to use, reproduce, modify, adapt, publish, translate, and distribute such content in any media, without compensation to you. You represent and warrant that you own or control all rights to the content you submit and that such content does not infringe on any third-party rights.</p>
+        </section>
+
+        <!-- Section 7: Warranties and Disclaimers -->
+        <section class="content-section delay-7">
+            <h2>Warranties and Disclaimers</h2>
+            <p>We provide our Services and Website on an "as is" and "as available" basis, without any warranties of any kind, either express or implied, except as specifically set forth in a written service agreement. To the fullest extent permitted by law, we disclaim all warranties, including but not limited to:</p>
+            <ul>
+                <li><strong>Implied Warranties of Merchantability:</strong> We do not warrant that our Services will meet your specific requirements or produce any particular results.</li>
+                <li><strong>Implied Warranties of Fitness for a Particular Purpose:</strong> We make no representation that our advice or planting selections will be suitable for your specific climate, soil, or conditions.</li>
+                <li><strong>Warranties of Non-Infringement:</strong> We warrant that we have the right to provide the Services, but we do not warrant that our methods will not infringe on any third-party rights.</li>
+                <li><strong>Warranties of Uninterrupted or Error-Free Use:</strong> We do not guarantee that our Website will be available at all times, free of errors, or secure from unauthorized access.</li>
+            </ul>
+
+            <h3>Service Warranties</h3>
+            <p>We stand behind the quality of our workmanship. Subject to the specific terms of your service agreement, we provide the following standard warranties:</p>
+            <ul>
+                <li><strong>Plant Establishment Warranty:</strong> We warrant that all plants we install will survive for a period of 90 days from the date of planting, provided they receive appropriate care (water, protection from pests) as per our instructions. We will replace any plant that dies within this period due to our negligence at no additional cost.</li>
+                <li><strong>Hardscaping Warranty:</strong> We provide a 1-year warranty on hardscaping installations (e.g., patios, walls, pathways) against defects in materials and workmanship. This does not cover damage caused by shifting soil, freeze-thaw cycles, or acts of nature.</li>
+            </ul>
+
+            <h3>Limitations on Warranties</h3>
+            <p>Our warranties are void if:</p>
+            <ul>
+                <li>You fail to follow our care instructions for plants (e.g., under-watering, over-watering, improper pruning).</li>
+                <li>Plants are damaged by pests, diseases, animals, or extreme weather events.</li>
+                <li>Hardscaping is damaged by vehicles, heavy equipment, or unauthorized modifications.</li>
+                <li>You fail to disclose known property conditions that affect the work.</li>
+            </ul>
+
+            <div class="warning-box">
+                <h4>No Guarantee of Results</h4>
+                <p>Gardening is inherently unpredictable. We cannot guarantee that your garden will look exactly like a conceptual design, that every plant will thrive, or that our ecological restoration efforts will attract specific wildlife. We make every effort to achieve your vision, but nature ultimately determines the outcome. Our warranties are limited to our workmanship, not the biological outcomes.</p>
+            </div>
+        </section>
+
+        <!-- Section 8: Limitation of Liability -->
+        <section class="content-section delay-7">
+            <h2>Limitation of Liability</h2>
+            <p>To the maximum extent permitted by applicable law, GreenThumbGurus, its owners, officers, employees, agents, and affiliates shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our Website, our Services, or any Content provided, whether based on warranty, contract, tort (including negligence), or any other legal theory, even if we have been advised of the possibility of such damages.</p>
+
+            <h3>Limitation on Damages</h3>
+            <p>In no event shall our total aggregate liability to you for all claims arising out of or related to our Services exceed the total amount paid by you to us for the specific service giving rise to the claim. This limitation applies to all types of claims, including but not limited to:</p>
+            <ul>
+                <li>Loss of profits, revenue, or business opportunities.</li>
+                <li>Loss of use, data, or goodwill.</li>
+                <li>Personal injury or property damage.</li>
+                <li>Claims for non-performance, defects, or delays.</li>
+            </ul>
+
+            <h3>Exceptions</h3>
+            <p>This limitation of liability does not apply to:</p>
+            <ul>
+                <li>Claims arising from our gross negligence, willful misconduct, or fraud.</li>
+                <li>Statutory rights that cannot be waived or limited under applicable law.</li>
+                <li>Mandatory consumer protection rights in your jurisdiction.</li>
+            </ul>
+
+            <h3>Indemnification</h3>
+            <p>You agree to indemnify, defend, and hold harmless GreenThumbGurus and its affiliates from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or related to:</p>
+            <ul>
+                <li>Your use of our Website or Services in violation of these Terms.</li>
+                <li>Your breach of any representation or warranty made herein.</li>
+                <li>Your violation of any applicable law or regulation.</li>
+                <li>Any claims that your use of our Services infringes on the rights of any third party.</li>
+            </ul>
+        </section>
+
+        <!-- Section 9: Cancellation and Termination -->
+        <section class="content-section delay-8">
+            <h2>Cancellation, Termination, and Dispute Resolution</h2>
+
+            <h3>Cancellation by Client</h3>
+            <p>You may cancel your service engagement by providing written notice to us. The following terms apply to cancellations:</p>
+            <ul>
+                <li><strong>Before Work Commences:</strong> If you cancel before we have started any work, you will receive a refund of any payments made, less a cancellation fee of 10% of the total project cost to cover administrative expenses.</li>
+                <li><strong>After Work Commences:</strong> If you cancel after work has begun, you will be responsible for payment for all work completed up to the date of cancellation, plus the cost of any materials already purchased for your project. No refunds will be given for the deposit.</li>
+                <li><strong>In-Progress Projects:</strong> For projects that are partially completed, we will provide a detailed accounting of work performed and materials used, and you will be billed accordingly.</li>
+            </ul>
+
+            <h3>Termination by GreenThumbGurus</h3>
+            <p>We may terminate or suspend our Services at any time without prior notice if:</p>
+            <ul>
+                <li>You violate any provision of these Terms or your service agreement.</li>
+                <li>You fail to make timely payments as agreed.</li>
+                <li>You provide false, inaccurate, or misleading information.</li>
+                <li>We determine, in our sole discretion, that it is unsafe or impractical to continue work.</li>
+                <li>You engage in behavior that is threatening, abusive, or harassing toward our team.</li>
+            </ul>
+
+            <h3>Dispute Resolution</h3>
+            <p>We value our relationship with our clients and strive to resolve any issues amicably. If a dispute arises, we encourage you to contact us directly to discuss your concerns. Most disputes can be resolved through open communication.</p>
+            <p>If we are unable to resolve the dispute informally, the following procedures shall apply:</p>
+            <ul>
+                <li><strong>Mediation:</strong> The parties agree to first attempt to resolve the dispute through non-binding mediation with a mutually agreed-upon mediator in Eden Valley, California. The cost of mediation shall be shared equally between the parties.</li>
+                <li><strong>Arbitration:</strong> If mediation fails, the dispute shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association. The arbitration shall be conducted in Eden Valley, California, and judgment upon the award may be entered in any court having jurisdiction.</li>
+                <li><strong>Exceptions:</strong> This dispute resolution clause does not apply to claims for injunctive relief, intellectual property infringement, or claims for amounts that are less than the jurisdictional limit of small claims court.</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4>Governing Law</h4>
+                <p>These Terms and any dispute arising out of or related to them shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. You consent to the exclusive jurisdiction and venue of the federal and state courts located in Eden Valley, California, for any legal proceedings.</p>
+            </div>
+
+            <blockquote>"In the garden of life, disputes are merely weeds. With communication and understanding, we can pull them out by the roots." — At GreenThumbGurus, we are committed to cultivating harmony in all our relationships.</blockquote>
+        </section>
+
+        <!-- Section 10: Miscellaneous -->
+        <section class="content-section delay-8">
+            <h2>Miscellaneous Provisions</h2>
+
+            <h3>Entire Agreement</h3>
+            <p>These Terms, together with any service agreements, proposals, and policies referenced herein, constitute the entire agreement between you and GreenThumbGurus regarding your use of our Website and Services, superseding any prior agreements, communications, or understandings, whether oral or written.</p>
+
+            <h3>Severability</h3>
+            <p>If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, the remaining provisions shall continue in full force and effect. The invalid provision shall be replaced by a provision that most closely reflects the intent of the original while being enforceable.</p>
+
+            <h3>Waiver</h3>
+            <p>Our failure to exercise or enforce any right or provision of these Terms shall not constitute a waiver of such right or provision. Any waiver by us of any provision of these Terms must be in writing and signed by an authorized representative of GreenThumbGurus.</p>
+
+            <h3>Assignment</h3>
+            <p>You may not assign, transfer, or sublicense your rights or obligations under these Terms without our prior written consent. We may assign our rights and obligations to an affiliate or successor in interest without your consent, provided that the assignee agrees to be bound by these Terms.</p>
+
+            <h3>Force Majeure</h3>
+            <p>We shall not be liable for any failure or delay in performing our Services due to causes beyond our reasonable control, including but not limited to acts of God, natural disasters, war, terrorism, civil unrest, strikes, labor disputes, power outages, internet disruptions, or governmental actions. In such events, our performance shall be suspended for the duration of the force majeure event.</p>
+
+            <h3>Survival</h3>
+            <p>Provisions of these Terms that by their nature should survive termination or expiration shall survive, including but not limited to Intellectual Property, Limitation of Liability, Indemnification, Payment Obligations, and Dispute Resolution.</p>
+
+            <h3>Electronic Communications</h3>
+            <p>By providing your email address, you consent to receive electronic communications from us, including service updates, invoices, newsletters, and marketing materials. You may opt out of marketing communications at any time by clicking the unsubscribe link in any such email.</p>
+
+            <h3>Contact Information</h3>
+            <p>If you have any questions, concerns, or requests regarding these Terms, please contact us at:</p>
+            <p><strong>GreenThumbGurus</strong><br />
+            142 Nature's Path, Botanical District, Eden Valley, EV 90210<br />
+            <strong>Phone:</strong> +1 (555) 867-5309<br />
+            <strong>Email:</strong> legal@greenthumbgurus.com</p>
+
+            <p>These Terms of Service were last updated on: <strong>April 15, 2026</strong>.</p>
+
+            <div class="highlight-box">
+                <h4>Thank You for Choosing GreenThumbGurus</h4>
+                <p>We are honored that you have entrusted us with your garden revival journey. These Terms are designed to ensure a smooth, transparent, and mutually beneficial relationship. We are committed to delivering excellence in all that we do, and we look forward to helping you create a garden that nourishes both you and the earth.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Address and Phone Number -->
+    <footer>
+        <h4>GreenThumbGurus - Garden Revival Service</h4>
+        <p>Bringing life, beauty, and ecological balance back to your outdoor spaces.</p>
+        <p><strong>Address:</strong> 142 Nature's Path, Botanical District, Eden Valley, EV 90210</p>
+        <p><strong>Phone:</strong> +1 (555) 867-5309</p>
+        <a href="contact.html" class="cta-button">Start Your Revival Journey Today</a>
+    </footer>
+
+</body>
+</html>

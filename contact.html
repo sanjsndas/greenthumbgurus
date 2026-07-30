@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenThumbGurus | Contact Us</title>
+    <style>
+        :root {
+            --primary-color: #2c5e3b;
+            --secondary-color: #f4ebd9;
+            --accent-color: #d4a373;
+            --text-dark: #333333;
+            --text-light: #fefae0;
+            --bg-color: #fdfaf6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        header {
+            background: linear-gradient(-45deg, #2c5e3b, #4a7c59, #8bb174, #d4a373);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: var(--text-light);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.5s backwards;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content-section {
+            background: white;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            animation: fadeInUp 1.2s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+
+        .content-section h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .content-section h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin: 1.8rem 0 0.8rem 0;
+            font-weight: 600;
+        }
+
+        .content-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1.5rem 0 1.5rem 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .content-section ul li, .content-section ol li {
+            margin-bottom: 0.8rem;
+        }
+
+        blockquote {
+            background-color: var(--secondary-color);
+            border-left: 8px solid var(--accent-color);
+            padding: 2rem;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--accent-color);
+            margin: 2rem 0;
+        }
+
+        /* Contact Grid Layout */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+
+        .contact-info-card {
+            background: var(--bg-color);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 6px solid var(--accent-color);
+        }
+
+        .contact-info-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info-card p {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .contact-info-card .icon {
+            font-size: 1.4rem;
+            min-width: 30px;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            background: var(--bg-color);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--primary-color);
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 1.2rem;
+            border: 2px solid #e0d6c8;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+            background: white;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.2);
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .contact-form .submit-btn {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 14px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .contact-form .submit-btn:hover {
+            background-color: #1a3a24;
+            transform: scale(1.02);
+        }
+
+        /* Map Container */
+        .map-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        .map-container .map-fallback {
+            display: none;
+            padding: 2rem;
+            text-align: center;
+            background: var(--secondary-color);
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .map-container .map-fallback p {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Hours Section */
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .hours-item {
+            padding: 0.8rem 1rem;
+            background: var(--bg-color);
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hours-item .day {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .hours-item .time {
+            color: var(--text-dark);
+        }
+
+        .hours-item.closed .time {
+            color: #a0522d;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: #1a3a24;
+            color: var(--text-light);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer h4 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            margin-top: 2rem;
+            animation: pulse 2s infinite;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #f4ebd9;
+            color: var(--primary-color);
+            animation: none;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            background: rgba(255,255,255,0.2);
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1.2rem; }
+            .content-section { padding: 2rem; }
+            nav ul { flex-direction: column; align-items: center; }
+            nav ul li { margin-bottom: 10px; }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .contact-form .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+            .map-container {
+                height: 300px;
+            }
+            .contact-info-card p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .map-container {
+                height: 250px;
+            }
+            .contact-form { padding: 1.5rem; }
+            .contact-info-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Contact GreenThumbGurus</h1>
+        <p>We're here to help you bring your garden back to life. Reach out and let's grow together.</p>
+    </header>
+
+    <main>
+        <!-- Section 1: Introduction -->
+        <section class="content-section delay-1">
+            <h2>Let's Start Your Garden Revival Journey</h2>
+            <p>At GreenThumbGurus, we believe that every great garden begins with a conversation. Whether you are a homeowner dreaming of a vibrant backyard oasis, a property manager seeking to enhance curb appeal, or a community organization looking to establish a public green space, we are here to listen, advise, and partner with you. Our team of horticultural experts, soil scientists, and landscape designers is passionate about transforming outdoor spaces into thriving, sustainable ecosystems.</p>
+            <p>We understand that reaching out to a new service provider can feel like a big step. That is why we strive to make the process as welcoming and straightforward as possible. When you contact us, you will speak directly with knowledgeable professionals who care about your vision and your property. We take the time to understand your goals, assess your unique challenges, and craft a customized plan that fits your budget and timeline.</p>
+            <p>Whether you have a specific project in mind, need advice on a gardening issue, or simply want to learn more about our services, we invite you to connect with us. Below you will find multiple ways to reach us—by phone, email, or through our convenient contact form. We look forward to hearing from you and helping you cultivate the garden of your dreams.</p>
+
+            <blockquote>"The best time to plant a tree was twenty years ago. The second best time is now. The best time to start your garden revival is today." — GreenThumbGurus</blockquote>
+        </section>
+
+        <!-- Section 2: Contact Grid -->
+        <section class="content-section delay-2">
+            <h2>Get in Touch</h2>
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info-card">
+                    <h3>📬 Contact Information</h3>
+                    <p><span class="icon">📍</span> <strong>Address:</strong> 142 Nature's Path, Botanical District, Eden Valley, EV 90210</p>
+                    <p><span class="icon">📞</span> <strong>Phone:</strong> <a href="tel:+15558675309" style="color: var(--primary-color); text-decoration: none;">+1 (555) 867-5309</a></p>
+                    <p><span class="icon">📧</span> <strong>Email:</strong> <a href="mailto:info@greenthumbgurus.com" style="color: var(--primary-color); text-decoration: none;">info@greenthumbgurus.com</a></p>
+                    <p><span class="icon">🕐</span> <strong>Hours:</strong> Monday–Friday, 8:00 AM – 6:00 PM</p>
+                    <p><span class="icon">🌐</span> <strong>Website:</strong> <a href="index.html" style="color: var(--primary-color); text-decoration: none;">www.greenthumbgurus.com</a></p>
+
+                    <h4 style="margin-top: 1.5rem;">📱 Follow Us</h4>
+                    <div class="social-links" style="justify-content: flex-start; margin-top: 0.5rem;">
+                        <a href="#" style="background: var(--secondary-color); color: var(--text-dark);">Facebook</a>
+                        <a href="#" style="background: var(--secondary-color); color: var(--text-dark);">Instagram</a>
+                        <a href="#" style="background: var(--secondary-color); color: var(--text-dark);">YouTube</a>
+                        <a href="#" style="background: var(--secondary-color); color: var(--text-dark);">Pinterest</a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 1.2rem;">Send Us a Message</h3>
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div>
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+                            </div>
+                            <div>
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Your last name">
+                            </div>
+                        </div>
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+
+                        <label for="serviceInterest">I'm interested in...</label>
+                        <select id="serviceInterest" name="serviceInterest">
+                            <option value="">Please select a service</option>
+                            <option value="soil">Soil Health & Remediation</option>
+                            <option value="native">Native Planting & Ecological Design</option>
+                            <option value="edible">Edible Landscapes & Food Forests</option>
+                            <option value="invasive">Invasive Species Management</option>
+                            <option value="water">Waterwise & Stormwater Solutions</option>
+                            <option value="hardscape">Hardscaping & Living Structures</option>
+                            <option value="arbor">Arboriculture & Tree Care</option>
+                            <option value="full">Full Garden Revival Package</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your garden, your vision, and how we can help..."></textarea>
+
+                        <button type="submit" class="submit-btn">🌱 Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Success Message (hidden initially) -->
+            <div id="formSuccess" style="display: none; padding: 1.5rem; background: #d4edda; border-radius: 12px; border-left: 6px solid #28a745; margin-top: 1.5rem;">
+                <h4 style="color: #155724; margin-bottom: 0.5rem;">✅ Message Sent Successfully!</h4>
+                <p style="color: #155724; font-size: 1.05rem;">Thank you for reaching out to GreenThumbGurus. Our team will review your message and get back to you within 24–48 hours. We look forward to helping you revive your garden!</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Map -->
+        <section class="content-section delay-3">
+            <h2>Find Us on the Map</h2>
+            <p>We are located in the heart of the Botanical District in Eden Valley. Our headquarters is surrounded by the lush landscapes that inspire our work. Whether you are visiting for a consultation, dropping by to pick up materials, or simply want to see our work firsthand, we welcome you to our green campus.</p>
+
+            <div class="map-container">
+                <!-- Google Maps Embed with a beautiful location (Eden Valley, CA area) -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12610.824361290243!2d-122.04533428338522!3d37.76402256686664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e2e31f3c7c7%3A0x9a8c6d8e0b2f4c5e!2sEden%20Valley%2C%20CA%2094516!5e0!3m2!1sen!2sus!4v1700000000000"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="GreenThumbGurus Location Map"
+                ></iframe>
+                <div class="map-fallback">
+                    <p>📍 <strong>GreenThumbGurus</strong></p>
+                    <p>142 Nature's Path, Botanical District, Eden Valley, EV 90210</p>
+                    <p style="font-size: 0.95rem; color: #666;">Map loading... Please check your internet connection or use the address above.</p>
+                </div>
+            </div>
+
+            <p><strong>Directions:</strong> From downtown Eden Valley, take Botanical Avenue south for 3 miles. Turn left onto Nature's Path, and we are the second building on the right, set back among the oak trees. Ample parking is available at the rear of the building.</p>
+
+            <div class="highlight-box">
+                <h4>🗺️ Virtual Tours Available</h4>
+                <p>Can't visit us in person? We offer virtual consultations via video call. Simply schedule a time through our contact form, and we will connect with you to discuss your garden revival project from the comfort of your home.</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Hours of Operation -->
+        <section class="content-section delay-4">
+            <h2>Hours of Operation</h2>
+            <p>Our team is available to assist you during the following hours. We are also available for emergency consultations and weekend appointments by prior arrangement.</p>
+
+            <div class="hours-grid">
+                <div class="hours-item">
+                    <span class="day">Monday</span>
+                    <span class="time">8:00 AM – 6:00 PM</span>
+                </div>
+                <div class="hours-item">
+                    <span class="day">Tuesday</span>
+                    <span class="time">8:00 AM – 6:00 PM</span>
+                </div>
+                <div class="hours-item">
+                    <span class="day">Wednesday</span>
+                    <span class="time">8:00 AM – 6:00 PM</span>
+                </div>
+                <div class="hours-item">
+                    <span class="day">Thursday</span>
+                    <span class="time">8:00 AM – 6:00 PM</span>
+                </div>
+                <div class="hours-item">
+                    <span class="day">Friday</span>
+                    <span class="time">8:00 AM – 6:00 PM</span>
+                </div>
+                <div class="hours-item closed">
+                    <span class="day">Saturday</span>
+                    <span class="time">Closed</span>
+                </div>
+                <div class="hours-item closed">
+                    <span class="day">Sunday</span>
+                    <span class="time">Closed</span>
+                </div>
+            </div>
+
+            <p><strong>Note:</strong> We are available for emergency consultations and weekend appointments by prior arrangement. Please contact us to schedule a time that works for you.</p>
+        </section>
+
+        <!-- Section 5: Why Contact Us -->
+        <section class="content-section delay-5">
+            <h2>Why Reach Out to GreenThumbGurus?</h2>
+            <p>We understand that choosing a garden revival partner is a significant decision. Here are just a few reasons why clients trust us with their outdoor spaces:</p>
+
+            <ul>
+                <li><strong>Expertise You Can Trust:</strong> Our team holds advanced degrees in horticulture, ecology, and landscape architecture. We bring scientific rigor and artistic vision to every project.</li>
+                <li><strong>Personalized Attention:</strong> We listen to your vision and tailor our services to your unique property, budget, and lifestyle. No two projects are the same.</li>
+                <li><strong>Eco-Conscious Practices:</strong> We use organic, sustainable methods that protect the health of your family, your pets, and the environment.</li>
+                <li><strong>Long-Term Support:</strong> Our relationship doesn't end when the project is complete. We offer ongoing stewardship and maintenance programs to ensure your garden continues to thrive.</li>
+                <li><strong>Community Commitment:</strong> As a locally owned business, we are invested in the health and beauty of our community. We participate in local green initiatives and educational programs.</li>
+                <li><strong>Transparent Communication:</strong> We provide clear proposals, detailed timelines, and honest updates throughout your project. No surprises, just results.</li>
+            </ul>
+
+            <p>We are passionate about what we do, and we would be honored to bring that passion to your garden. Whether you have a small urban patio or a sprawling estate, we have the expertise and the enthusiasm to help you realize your vision. Don't wait—your dream garden is closer than you think.</p>
+
+            <div class="highlight-box">
+                <h4>🌟 Free Initial Consultation</h4>
+                <p>We offer a complimentary, no-obligation consultation for all new clients. During this visit, we will assess your property, discuss your goals, and provide a preliminary roadmap for your garden revival. Schedule yours today by calling us at <strong>+1 (555) 867-5309</strong> or by filling out the contact form above.</p>
+            </div>
+
+            <blockquote>"The love of gardening is a seed that once sown never dies, but grows to the enduring happiness that the love of nature gives." — At GreenThumbGurus, we are here to help you cultivate that love.</blockquote>
+
+            <p style="text-align: center; font-size: 1.2rem; margin-top: 2rem;">
+                <strong>We can't wait to hear from you. Let's grow something beautiful together.</strong>
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer with Address and Phone Number -->
+    <footer>
+        <h4>GreenThumbGurus - Garden Revival Service</h4>
+        <p>Bringing life, beauty, and ecological balance back to your outdoor spaces.</p>
+        <p><strong>Address:</strong> 142 Nature's Path, Botanical District, Eden Valley, EV 90210</p>
+        <p><strong>Phone:</strong> +1 (555) 867-5309</p>
+        <a href="contact.html" class="cta-button">Start Your Revival Journey Today</a>
+    </footer>
+
+    <script>
+        // Form submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Get form values
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const serviceInterest = document.getElementById('serviceInterest').value;
+            const message = document.getElementById('message').value.trim();
+
+            // Basic validation
+            if (!firstName || !lastName || !email || !message) {
+                alert('Please fill in all required fields (First Name, Last Name, Email, and Message).');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // In a real implementation, this would send the data to a server
+            // For this demo, we show a success message
+            const successDiv = document.getElementById('formSuccess');
+            successDiv.style.display = 'block';
+
+            // Reset form
+            document.getElementById('contactForm').reset();
+
+            // Scroll to success message
+            successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Hide success message after 8 seconds
+            setTimeout(function() {
+                successDiv.style.display = 'none';
+            }, 8000);
+
+            // Log the form data (for demo purposes)
+            console.log('Form submitted:', {
+                firstName,
+                lastName,
+                email,
+                phone,
+                serviceInterest,
+                message
+            });
+
+            return false;
+        }
+
+        // Map fallback: if iframe fails to load, show fallback content
+        document.addEventListener('DOMContentLoaded', function() {
+            const iframe = document.querySelector('.map-container iframe');
+            const fallback = document.querySelector('.map-container .map-fallback');
+
+            if (iframe) {
+                // If iframe fails to load, show fallback
+                iframe.addEventListener('error', function() {
+                    iframe.style.display = 'none';
+                    fallback.style.display = 'flex';
+                });
+
+                // Also check after a timeout
+                setTimeout(function() {
+                    // If iframe is still not loaded properly, show fallback
+                    // We can't directly check if content loaded, but we can check if it has a src
+                    if (iframe.src && !iframe.contentDocument) {
+                        // Iframe might still be loading, we'll be optimistic
+                    }
+                }, 5000);
+            }
+        });
+    </script>
+
+</body>
+</html>

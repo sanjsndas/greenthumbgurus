@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenThumbGurus | Disclaimer</title>
+    <style>
+        :root {
+            --primary-color: #2c5e3b;
+            --secondary-color: #f4ebd9;
+            --accent-color: #d4a373;
+            --text-dark: #333333;
+            --text-light: #fefae0;
+            --bg-color: #fdfaf6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        header {
+            background: linear-gradient(-45deg, #2c5e3b, #4a7c59, #8bb174, #d4a373);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: var(--text-light);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.5s backwards;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content-section {
+            background: white;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            animation: fadeInUp 1.2s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+        .delay-7 { animation-delay: 0.7s; }
+
+        .content-section h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .content-section h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin: 1.8rem 0 0.8rem 0;
+            font-weight: 600;
+        }
+
+        .content-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1.5rem 0 1.5rem 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .content-section ul li, .content-section ol li {
+            margin-bottom: 0.8rem;
+        }
+
+        blockquote {
+            background-color: var(--secondary-color);
+            border-left: 8px solid var(--accent-color);
+            padding: 2rem;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--accent-color);
+            margin: 2rem 0;
+        }
+
+        .warning-box {
+            background-color: #fdf0e6;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 8px solid #d4a373;
+            margin: 2rem 0;
+        }
+
+        footer {
+            background-color: #1a3a24;
+            color: var(--text-light);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer h4 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            margin-top: 2rem;
+            animation: pulse 2s infinite;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #f4ebd9;
+            color: var(--primary-color);
+            animation: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1.2rem; }
+            .content-section { padding: 2rem; }
+            nav ul { flex-direction: column; align-items: center; }
+            nav ul li { margin-bottom: 10px; }
+            .content-section ul, .content-section ol { margin-left: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Disclaimer</h1>
+        <p>Clarity, responsibility, and the honest truth about our expertise, advice, and services.</p>
+    </header>
+
+    <main>
+        <!-- Section 1: General Disclaimer -->
+        <section class="content-section delay-1">
+            <h2>General Disclaimer</h2>
+            <p>Welcome to the GreenThumbGurus Disclaimer page. This document serves as a formal, comprehensive statement regarding the limitations of our liability, the nature of the information we provide, and the responsibilities assumed by users of our website, services, and content. By accessing this website, utilizing our garden revival services, or engaging with any of our digital or physical content, you agree to the terms and conditions outlined herein. If you do not agree with any part of this disclaimer, we respectfully ask that you refrain from using our website or services.</p>
+            <p>GreenThumbGurus is a professional garden revival and ecological restoration service provider. We employ highly trained horticulturists, arborists, soil scientists, and landscape designers who bring decades of collective experience to every project. However, despite our expertise, the information and advice provided on this website, in our newsletters, via consultations, or through any other medium are intended for general informational and educational purposes only. They should not be construed as professional, legal, or financial advice tailored to your specific circumstances.</p>
+            <p>We operate with the highest standards of integrity and strive to ensure that all information presented is accurate, up-to-date, and rooted in proven horticultural science. Nevertheless, the natural world is complex, and gardening outcomes are influenced by countless variables—many of which are beyond our control, including weather patterns, soil variations, pest pressures, and local regulations. Therefore, we cannot guarantee that the information, techniques, or recommendations we provide will yield specific results in your particular environment. Your use of our information and services is at your own risk.</p>
+
+            <div class="warning-box">
+                <h4>Important Notice</h4>
+                <p>This disclaimer is a legally binding document. It governs your relationship with GreenThumbGurus and limits our liability to the fullest extent permitted by law. We urge you to read it carefully. If you have any questions or need clarification, please do not hesitate to contact us using the information provided in the footer.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Informational Content -->
+        <section class="content-section delay-2">
+            <h2>Informational Content and Accuracy</h2>
+            <p>At GreenThumbGurus, we take great pride in the quality and depth of the information we share. Our website features articles, guides, blog posts, videos, and case studies that cover a wide range of topics, from soil remediation techniques and native plant selection to seasonal maintenance schedules and sustainable pest management. This content is curated by our team of experts and is intended to empower you with the knowledge to create and maintain a thriving garden.</p>
+            <p>However, we must emphasize that gardening is both an art and a science. What works in one region, with one soil type, or under one set of climatic conditions may not work in another. The information we provide is based on general principles and best practices observed across various contexts. We do not guarantee that the specific advice we offer will be applicable to your unique situation. Factors such as microclimates, historical land use, water quality, and the presence of specific pathogens can dramatically alter outcomes.</p>
+            <p>We make every effort to verify the accuracy of the information we publish. We consult authoritative sources, peer-reviewed research, and our own field data. Nevertheless, errors can occur, and knowledge in the field of horticulture and ecology is constantly evolving. We reserve the right to update, modify, or retract any information on our website at any time without prior notice. We encourage you to cross-reference any critical information with other reputable sources and to consult with a local extension service or a certified professional before implementing any significant changes to your landscape.</p>
+            <p>Furthermore, we do not endorse, recommend, or guarantee the performance of any specific products, tools, or brands mentioned in our content unless explicitly stated. Any reference to third-party products is provided for informational purposes only and does not constitute an endorsement or warranty. We strongly advise you to read product labels, follow manufacturer instructions, and test any new product on a small, inconspicuous area before full-scale application.</p>
+
+            <blockquote>"The best fertilizer is the gardener's shadow." — Our advice is a guide, but your observation and connection with your garden are irreplaceable.</blockquote>
+        </section>
+
+        <!-- Section 3: Professional Consultation -->
+        <section class="content-section delay-3">
+            <h2>Professional Consultation and Service Delivery</h2>
+            <p>GreenThumbGurus offers a comprehensive suite of professional garden revival services, including but not limited to soil analysis, invasive species removal, native planting design, installation of food forests, hardscaping, and ongoing stewardship programs. When you engage our services, we enter into a contractual relationship where we agree to provide expert labor and knowledge to transform your outdoor space.</p>
+            <p>We emphasize that our on-site services are delivered by qualified professionals who adhere to industry standards and best practices. However, despite our best efforts, certain risks are inherent to any landscaping or horticultural project. These risks include, but are not limited to: plant mortality due to transplant shock, unpredictable weather events, pest outbreaks, and underlying soil conditions that may not be fully apparent despite thorough testing. We do not guarantee the survival of every plant we install, nor do we guarantee that your garden will look exactly like the conceptual designs, as natural growth patterns can be unpredictable.</p>
+            <p>Our consultations, whether in-person or virtual, provide expert opinions based on the information available at the time. We rely on the accuracy of the data you provide regarding your property, including its history, existing vegetation, and any prior treatments. We recommend that you disclose all relevant information about your property to ensure the most accurate assessment. We are not responsible for any adverse outcomes resulting from incomplete or inaccurate information provided by you.</p>
+            <p>We also strongly advise that any major structural changes, such as the installation of retaining walls, water features, or large tree removals, be reviewed by a licensed structural engineer, surveyor, or arborist as required by local building codes and regulations. GreenThumbGurus may provide recommendations, but we do not assume the role of a licensed engineer or surveyor. It is your responsibility to secure any necessary permits and approvals from local authorities before commencing any work.</p>
+
+            <div class="highlight-box">
+                <h4>Service Warranty</h4>
+                <p>GreenThumbGurus stands behind the quality of our workmanship. We offer a 90-day warranty on plant establishment and a 1-year warranty on hardscaping installations, subject to the terms and conditions outlined in our service agreements. This warranty does not cover damage caused by neglect, improper watering, vandalism, extreme weather events, or pest infestations beyond our control. Please refer to your specific service contract for detailed warranty information.</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Health and Safety -->
+        <section class="content-section delay-4">
+            <h2>Health and Safety Disclaimer</h2>
+            <p>Gardening and landscaping involve physical activities that carry inherent risks. These include, but are not limited to: muscular strains, cuts from sharp tools, allergic reactions to plants (e.g., poison ivy, poison oak), exposure to harmful bacteria in soil (e.g., tetanus), and injuries from falls or lifting heavy objects. At GreenThumbGurus, we prioritize the safety of our team and our clients. Our professionals are trained in safe work practices and use appropriate personal protective equipment (PPE).</p>
+            <p>However, we cannot assume responsibility for your personal safety when you engage in gardening activities on your own. If you choose to implement any of the techniques or practices described on our website or in our consultations, you do so at your own risk. We strongly recommend that you:</p>
+            <ul>
+                <li>Wear appropriate clothing, including long sleeves, pants, closed-toe shoes, and gloves.</li>
+                <li>Use eye protection when using power tools or when handling chemicals.</li>
+                <li>Be aware of your surroundings, including overhead power lines, underground utilities, and slippery surfaces.</li>
+                <li>Read and follow all instructions for tools and products carefully.</li>
+                <li>Stay hydrated and take breaks to avoid heat exhaustion or overexertion.</li>
+                <li>Consult a physician before engaging in strenuous physical activity if you have any pre-existing health conditions.</li>
+            </ul>
+            <p>In the event of an injury or medical emergency, seek professional medical help immediately. GreenThumbGurus is not a medical service provider, and we cannot offer medical advice or treatment. Any information we provide regarding the medicinal or edible properties of plants is for educational purposes only and should not be construed as a prescription or a substitute for professional medical advice. Always consult with a qualified healthcare provider before consuming any plant material for medicinal purposes.</p>
+            <p>We also advise caution regarding the use of natural pesticides, herbicides, and fertilizers. While we promote organic and low-impact alternatives, even natural substances can be harmful if misused. Always keep products out of reach of children and pets, and follow label instructions meticulously. We do not accept liability for any adverse health effects resulting from the use of any products recommended or mentioned in our content.</p>
+        </section>
+
+        <!-- Section 5: Financial and Legal Disclaimer -->
+        <section class="content-section delay-5">
+            <h2>Financial and Legal Disclaimer</h2>
+            <p>The information provided on this website, including but not limited to cost estimates, return on investment (ROI) projections, and property value assessments, is for illustrative and informational purposes only. GreenThumbGurus is not a financial advisory firm, and we do not offer financial, tax, or legal advice. Any projections regarding the potential increase in property value resulting from landscaping improvements are estimates based on general market trends and should not be relied upon as guarantees of actual financial outcomes.</p>
+            <p>We strongly recommend that you consult with a qualified financial advisor, real estate agent, or legal professional before making any significant investment decisions related to your property. Landscaping projects can involve substantial costs, and the financial benefits may vary based on local market conditions, the specific nature of the improvements, and individual buyer preferences. GreenThumbGurus does not assume any liability for financial losses or missed opportunities resulting from reliance on the information we provide.</p>
+            <p>Furthermore, we are not liable for any legal consequences arising from your use of our services or content. It is your responsibility to ensure that all activities on your property comply with applicable local, state, and federal laws, including zoning regulations, homeowners' association rules, water usage restrictions, and environmental protection laws. We provide guidance on sustainable practices, but we cannot guarantee that our recommendations will satisfy all legal requirements. We recommend that you consult with relevant authorities to obtain necessary permits and approvals before undertaking any project.</p>
+            <p>In the event of a dispute, you agree to first attempt to resolve the matter informally by contacting us directly. If a resolution cannot be reached, you agree that any legal proceedings shall be governed by the laws of the state in which our primary office is located, and you consent to the exclusive jurisdiction of the courts in that jurisdiction. This provision does not affect your statutory rights as a consumer.</p>
+        </section>
+
+        <!-- Section 6: Third-Party Links -->
+        <section class="content-section delay-6">
+            <h2>Third-Party Links and External Resources</h2>
+            <p>For your convenience and to enrich your learning experience, our website may contain links to external websites, blogs, or resources operated by third parties. These links are provided for informational and reference purposes only. GreenThumbGurus does not endorse, control, or assume responsibility for the content, privacy practices, or accuracy of any third-party websites. We do not have any control over the nature, content, and availability of these sites.</p>
+            <p>We strongly advise you to review the privacy policies and terms of use of any third-party website you visit. We are not liable for any loss, damage, or inconvenience arising from your use of or reliance on any third-party content. The inclusion of a link does not imply a recommendation or endorsement of the views expressed within it. We encourage you to exercise discretion and critical thinking when accessing external resources.</p>
+            <p>Similarly, any references to specific products, services, or organizations in our content are not endorsements unless explicitly stated. We may occasionally participate in affiliate marketing programs, which means we may earn a small commission if you purchase products through links on our site, at no additional cost to you. This does not influence our editorial content or product recommendations. We only recommend products and services that we genuinely believe provide value to our audience.</p>
+        </section>
+
+        <!-- Section 7: Environmental and Ecological Disclaimer -->
+        <section class="content-section delay-6">
+            <h2>Environmental and Ecological Disclaimer</h2>
+            <p>At GreenThumbGurus, we are passionate advocates for ecological sustainability and environmental stewardship. Our methods are rooted in regenerative practices that aim to enhance biodiversity, improve soil health, conserve water, and reduce reliance on synthetic chemicals. However, we must acknowledge that the environmental outcomes of our interventions are subject to complex, dynamic forces that are not entirely within our control.</p>
+            <p>Factors such as climate change, invasive species migration, and regional weather patterns can significantly influence the success of our ecological restoration efforts. We cannot guarantee that a garden we revive will perfectly replicate a native ecosystem, nor can we assure that it will remain resilient in the face of severe environmental disturbances. Our work is a contribution to ecological health, but it is not a panacea. We encourage you to view your garden as part of a larger landscape and to support broader conservation efforts in your community.</p>
+            <p>We also emphasize that some of the techniques we recommend, such as the introduction of certain native plants, are based on current scientific understanding. However, the field of ecology is continually evolving, and what is considered "native" or "beneficial" today may be reconsidered in the future. We commit to staying informed about the latest research and adjusting our practices accordingly. We encourage you to do the same and to remain flexible and adaptive in your approach to gardening.</p>
+            <p>Furthermore, while we promote the reduction of chemical inputs, we recognize that there are situations where targeted, responsible use of pesticides or herbicides may be necessary to control invasive species or prevent significant economic damage. In such cases, we follow integrated pest management (IPM) principles, using the least toxic and most effective methods available. However, we cannot guarantee that these measures will be 100% effective or that they will have no unintended ecological consequences.</p>
+        </section>
+
+        <!-- Section 8: Intellectual Property -->
+        <section class="content-section delay-7">
+            <h2>Intellectual Property Disclaimer</h2>
+            <p>All content on this website, including but not limited to text, graphics, logos, images, videos, audio clips, digital downloads, and data compilations, is the property of GreenThumbGurus or its content suppliers and is protected by international copyright, trademark, and intellectual property laws. Unauthorized reproduction, distribution, modification, or republication of any content is strictly prohibited.</p>
+            <p>We encourage sharing of our educational content for non-commercial purposes, provided that proper attribution is given to GreenThumbGurus. For commercial use or republication, you must obtain prior written consent from us. Any unauthorized use of our intellectual property may result in legal action. All trademarks, service marks, and trade names displayed on this site are the property of their respective owners. No license or right to use any of these marks is granted without the prior written permission of the owner.</p>
+            <p>We respect the intellectual property rights of others. If you believe that any content on our website infringes upon your copyright, please contact us immediately with a detailed description of the alleged infringement, and we will investigate and take appropriate action in accordance with the Digital Millennium Copyright Act (DMCA) or applicable laws.</p>
+        </section>
+
+        <!-- Section 9: Limitation of Liability -->
+        <section class="content-section delay-7">
+            <h2>Limitation of Liability</h2>
+            <p>To the fullest extent permitted by applicable law, GreenThumbGurus, its owners, employees, agents, and affiliates shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of this website, our services, or any information contained herein. This includes, but is not limited to, damages for loss of profits, data, business interruption, personal injury, or property damage, even if we have been advised of the possibility of such damages.</p>
+            <p>Our liability for any claim arising out of or related to our services shall be limited to the total amount paid by you for the specific service giving rise to the claim. This limitation applies regardless of the form of action, whether in contract, tort (including negligence), strict liability, or otherwise. Some jurisdictions do not allow the exclusion or limitation of liability for consequential or incidental damages, so the above limitation may not apply to you. In such jurisdictions, our liability is limited to the greatest extent permitted by law.</p>
+            <p>You agree to indemnify, defend, and hold harmless GreenThumbGurus and its affiliates from and against any and all claims, liabilities, damages, costs, and expenses (including reasonable attorneys' fees) arising out of or related to your use of our website, your violation of this disclaimer, or your violation of any rights of any third party. We reserve the right to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, in which case you agree to cooperate with us in asserting any available defenses.</p>
+        </section>
+
+        <!-- Section 10: Updates and Contact -->
+        <section class="content-section delay-7">
+            <h2>Updates to This Disclaimer</h2>
+            <p>We reserve the right to update, amend, or replace this disclaimer at any time without prior notice. Changes will be effective immediately upon posting on this page. We encourage you to review this page periodically to stay informed of any updates. Your continued use of our website and services after any modifications constitutes your acceptance of the revised disclaimer.</p>
+            <p>If we make significant changes to this disclaimer, we will provide a prominent notice on our homepage or send an email notification to our subscribers. We recommend that you check this page regularly, especially before engaging our services or acting upon any information you find on our website.</p>
+            <p>This disclaimer was last updated on: <strong>April 15, 2026</strong>.</p>
+
+            <div class="highlight-box">
+                <h4>Contact Us for Clarification</h4>
+                <p>We understand that disclaimers can sometimes feel overwhelming. If you have any questions, concerns, or require further clarification regarding any aspect of this disclaimer, please do not hesitate to reach out to us. Our team is here to help you navigate the information and to ensure you feel confident in your interactions with GreenThumbGurus.</p>
+                <p><strong>GreenThumbGurus</strong><br />
+                142 Nature's Path, Botanical District, Eden Valley, EV 90210<br />
+                <strong>Phone:</strong> +1 (555) 867-5309<br />
+                <strong>Email:</strong> legal@greenthumbgurus.com</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Address and Phone Number -->
+    <footer>
+        <h4>GreenThumbGurus - Garden Revival Service</h4>
+        <p>Bringing life, beauty, and ecological balance back to your outdoor spaces.</p>
+        <p><strong>Address:</strong> 142 Nature's Path, Botanical District, Eden Valley, EV 90210</p>
+        <p><strong>Phone:</strong> +1 (555) 867-5309</p>
+        <a href="contact.html" class="cta-button">Start Your Revival Journey Today</a>
+    </footer>
+
+</body>
+</html>
